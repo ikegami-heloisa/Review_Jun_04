@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Revisão de Inglês – Davi V.</title>
+  <title>Revisão de Inglês – A2-B1</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,7 +13,7 @@
     h1, h2 {
       color: #2a5d9f;
     }
-    textarea, input[type="text"], select {
+    textarea, input[type="text"] {
       width: 100%;
       padding: 8px;
       margin: 6px 0 12px;
@@ -35,79 +35,57 @@
     .button:hover {
       background-color: #1e4374;
     }
-    .feedback {
-      font-weight: bold;
-      margin-top: 5px;
-    }
   </style>
 </head>
 <body>
-  
+  <h1>Revisão de Inglês – Nível A2-B1</h1>
   <h2>Present Perfect x Simple Past • Famosos • Autobiografia</h2>
 
-  <form action="https://formsubmit.co/SEU-EMAIL-AQUI" method="POST">
-    
-    <!-- Parte 1 -->
-    <div class="question-block">
-      <h3>Parte 1 – Complete com Simple Past ou Present Perfect</h3>
-      <ol id="part1">
-        <li>LeBron James <input type="text" name="q1" data-answer="has won"> (win) four NBA championships.</li>
-        <li>I <input type="text" name="q2" data-answer="watched"> (watch) a basketball game last weekend.</li>
-        <li>Kobe Bryant <input type="text" name="q3" data-answer="retired"> (retire) in 2016.</li>
-        <li>He <input type="text" name="q4" data-answer="has written"> (write) an autobiography about his life.</li>
-        <li>She <input type="text" name="q5" data-answer="has never met"> (never/meet) a famous person.</li>
-        <li>We <input type="text" name="q6" data-answer="went"> (go) to the museum yesterday.</li>
-        <li>They <input type="text" name="q7" data-answer="have played"> (play) basketball since they were kids.</li>
-        <li>I <input type="text" name="q8" data-answer="have read"> (read) about Michael Jordan many times.</li>
-      </ol>
-    </div>
+  <!-- Parte 1 -->
+  <div class="question-block">
+    <h3>Parte 1 – Complete com Simple Past ou Present Perfect</h3>
+    <p>1. LeBron James <input type="text" placeholder="resposta aqui"> (win) four NBA championships.</p>
+    <p>2. I <input type="text" placeholder="resposta aqui"> (watch) a basketball game last weekend.</p>
+    <p>3. Kobe Bryant <input type="text" placeholder="resposta aqui"> (retire) in 2016.</p>
+    <p>4. He <input type="text" placeholder="resposta aqui"> (write) an autobiography about his life.</p>
+    <p>5. She <input type="text" placeholder="resposta aqui"> (never/meet) a famous person.</p>
+    <p>6. We <input type="text" placeholder="resposta aqui"> (go) to the museum yesterday.</p>
+    <p>7. They <input type="text" placeholder="resposta aqui"> (play) basketball since they were kids.</p>
+    <p>8. I <input type="text" placeholder="resposta aqui"> (read) about Michael Jordan many times.</p>
+  </div>
 
-    <!-- Parte 2 -->
-    <div class="question-block">
-      <h3>Parte 2 – Escolha a opção correta</h3>
-      <ol id="part2">
-        <li>Which sentence is in the Present Perfect?
-          <input type="text" name="q9" data-answer="b">
-        </li>
-        <li>Which sentence is in the Simple Past?
-          <input type="text" name="q10" data-answer="b">
-        </li>
-        <li>My friend is a great ________.
-          <input type="text" name="q11" data-answer="athlete">
-        </li>
-        <li>What is an “autobiography”?
-          <input type="text" name="q12" data-answer="c">
-        </li>
-        <li>Michael Jordan is a very ________ basketball player.
-          <input type="text" name="q13" data-answer="famous">
-        </li>
-      </ol>
-    </div>
+  <!-- Parte 2 -->
+  <div class="question-block">
+    <h3>Parte 2 – Escolha a opção correta</h3>
+    <p>1. Which sentence is in the <strong>Present Perfect</strong>?<br>
+      <input type="text" placeholder="a, b ou c">
+    </p>
+    <p>2. Which sentence is in the <strong>Simple Past</strong>?<br>
+      <input type="text" placeholder="a, b ou c">
+    </p>
+    <p>3. Complete the sentence: “My friend is a great ________.”<br>
+      <input type="text" placeholder="actor, athlete ou author">
+    </p>
+    <p>4. What is an “<strong>autobiography</strong>”?<br>
+      <input type="text" placeholder="a, b ou c">
+    </p>
+    <p>5. Choose the word that fits: “Michael Jordan is a very ________ basketball player.”<br>
+      <input type="text" placeholder="famous, inspire ou real-life">
+    </p>
+  </div>
 
-    <!-- Parte 3 -->
-    <div class="question-block">
-      <h3>Parte 3 – Produção Escrita</h3>
-      <textarea name="writing" rows="8" placeholder="Escreva seu texto aqui..."></textarea>
-    </div>
+  <!-- Parte 3 -->
+  <div class="question-block">
+    <h3>Parte 3 – Produção Escrita</h3>
+    <p>Escolha uma das opções abaixo e escreva de 4 a 6 frases:</p>
+    <ul>
+      <li><strong>Opção 1:</strong> Escreva sobre um atleta famoso que você admira.</li>
+      <li><strong>Opção 2:</strong> Escreva sobre você usando *I have...* e *I... (simple past)*.</li>
+    </ul>
+    <textarea rows="8" placeholder="Digite seu texto aqui..."></textarea>
+  </div>
 
-    <button type="button" class="button" onclick="corrigir()">Corrigir</button>
-    <button type="submit" class="button" style="margin-left: 10px;">Enviar por e-mail</button>
-  </form>
+  <button class="button" onclick="alert('Respostas salvas localmente. Você pode copiar seu texto e mostrar ao professor.')">Salvar Respostas</button>
 
-  <script>
-    function corrigir() {
-      const inputs = document.querySelectorAll('input[type="text"]');
-      inputs.forEach(input => {
-        const correct = input.dataset.answer.trim().toLowerCase();
-        const user = input.value.trim().toLowerCase();
-        if (user === correct) {
-          input.style.backgroundColor = "#d4edda"; // verde claro
-        } else {
-          input.style.backgroundColor = "#f8d7da"; // vermelho claro
-        }
-      });
-      alert("Correção feita! Respostas certas estão verdes, erradas em vermelho.");
-    }
-  </script>
 </body>
 </html>
